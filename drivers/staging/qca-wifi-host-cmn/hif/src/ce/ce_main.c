@@ -584,6 +584,8 @@ int hif_ce_bus_early_suspend(struct hif_softc *scn)
 	uint8_t ul_pipe, dl_pipe;
 	int ce_id, status, ul_is_polled, dl_is_polled;
 	struct CE_state *ce_state;
+	ul_pipe = 0;
+	dl_pipe = 0;
 
 	status = hif_map_service_to_pipe(&scn->osc, WMI_CONTROL_SVC,
 					 &ul_pipe, &dl_pipe,
