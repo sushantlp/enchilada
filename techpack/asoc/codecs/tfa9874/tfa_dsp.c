@@ -3036,7 +3036,7 @@ error_exit:
 
 enum tfa_error tfa_dev_stop(struct tfa_device *tfa)
 {
-	enum Tfa98xx_Error err = Tfa98xx_Error_Ok;
+	int err = Tfa98xx_Error_Ok;
 
 	/* mute */
 	tfaRunMute(tfa);
@@ -3497,7 +3497,7 @@ int tfa_dev_probe(int slave, struct tfa_device *tfa)
 
 enum tfa_error tfa_dev_set_state(struct tfa_device *tfa, enum tfa_state state)
 {
-	enum tfa_error err = tfa_error_ok;
+	int err = tfa_error_ok;
 	int loop = 50, ready = 0;
 	int count;
 
@@ -3669,7 +3669,7 @@ int tfa_dev_mtp_get(struct tfa_device *tfa, enum tfa_mtp item)
 
 enum tfa_error tfa_dev_mtp_set(struct tfa_device *tfa, enum tfa_mtp item, int value)
 {
-	enum tfa_error err = tfa_error_ok;
+	int err = tfa_error_ok;
 
 	switch (item) {
 		case TFA_MTP_OTC:
@@ -3775,7 +3775,7 @@ enum Tfa98xx_Error tfa_status(struct tfa_device *tfa)
 
 int tfa_plop_noise_interrupt(struct tfa_device *tfa, int profile, int vstep)
 {
-	enum Tfa98xx_Error err;
+	int err;
 	int no_clk=0;
 
 	/* Remove sticky bit by reading it once */
