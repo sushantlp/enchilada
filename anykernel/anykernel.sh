@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Franco Kernel by franciscofranco @ xda-developers
+kernel.string=Franco Kernel by franciscofranco, ZZupreme-Build by ZaneZam @ xda-developers
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
